@@ -1,0 +1,32 @@
+.first-container{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid red;
+}
+
+.item-uno{
+    border: 1px solid olivedrab;
+    height: 40vh;
+    width :50vh;
+}
+
+.second-container{
+    border: 1px solid rgb(27, 27, 15);
+    position: absolute;
+}
+.third-container{
+    position: relative;
+    border: 1px solid purple;
+    align-items: center;
+    text-align:right;
+    ;
+}
+
+.forth-container{
+    border: 1px dotted firebrick;
+}
+
+.container{
+    border: 5px dotted green;
+    position: relative;
+}

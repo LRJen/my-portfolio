@@ -1,0 +1,100 @@
+@media screen and (max-width: 760px) {
+    /*.headsec .head nav{
+        top:auto !important;
+        bottom: 0px !important;
+        display: flex ;
+        flex-direction: row !important;
+        justify-content: center !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 100%;
+        background-color:rgb(84, 78, 78);
+        column-gap: 5px;
+    }*/
+    .headsec{
+        height: 160vh;
+        padding-bottom: 6rem;
+    }
+
+    .service .title h2{
+        font-size: 4rem !important;
+        text-align: center !important;
+        padding-left: 10px;
+        
+    }
+
+    .service{
+        padding-top: 50px !important;
+        height: 200vh;
+    } 
+
+    .box{
+        grid-template-columns: 1fr !important;
+        padding-bottom: 6rem !important;
+        width: 100%;
+        padding-right: 35px;
+        height: 180vh;
+    }
+
+    .content{
+        grid-template-columns: 1fr !important;
+        padding: 6rem;
+    }
+
+    .content-text{
+        
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .content .content-image .image{
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .about .main{
+        grid-template-columns: 1fr !important;
+    }
+
+    .about .main .about-text{
+        text-align: left;
+        padding-left: 0;
+    }
+
+    .about .main img {
+        display: none;
+    }
+
+    .about .main .about-text button {
+        text-align: right;
+        justify-content: right;
+    }
+
+    .skills-con{
+        display: grid !important;
+        grid-template-columns: repeat(1,1fr) !important;
+        grid-gap: 5px;
+        height: 100vh !important;
+        background-color: whitesmoke !important;
+    }
+
+    .skills-con .h-shape{
+        display: none;
+    }
+
+    .skills-con h1{
+        color: rgb(220, 21, 87);
+    }
+
+    .skills-con h3{
+        color: palevioletred !important;
+    }
+
+    .skills .skill .skill-text p{
+        color: white !important;
+    }
+
+    .head .nav ul{
+        
+    }
+}
