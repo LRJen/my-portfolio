@@ -233,10 +233,60 @@ button:hover {
     border: 2px solid #f9004d;
 }
 
-/* Services Section */
+/* Updated About Section with CV Card */
+#about {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 5%;
+    background-color: #fff;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    width: 70%;
+}
+
+.cv-card {
+    width: 25%;
+    padding: 2rem;
+    background-color: #f9f9f9; /* Matches timeline-item */
+    border-left: 4px solid #f9004d; /* Matches timeline-item */
+    border-radius: 1rem; /* Matches timeline-item */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* For ::before */
+    transition: box-shadow 0.3s ease; /* Matches timeline-item */
+    text-align: left;
+}
+
+.cv-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.cv-card a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #f9004d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 2rem;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cv-card a:hover {
+    background-color: #d80040;
+    transform: scale(1.05);
+}
+
+/* Services Section (Projects) */
 .service {
     padding: 5rem 0;
-    background: rgba(16, 16, 16, .3);
+    background: rgba(16, 16, 16, 0.3);
 }
 
 .title h2 {
@@ -260,14 +310,10 @@ button:hover {
     border-radius: 1rem;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transition: all 0.3s ease;
-    min-height: 200px;
-    min-height: 350px; /* Set a fixed min-height for consistency */
-    max-height: 400px; /* Limit height to prevent overflow */
-    overflow: hidden; /* Hide excess content */
+    min-height: 350px; /* Minimum height for consistency */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribute content evenly */
+    justify-content: space-between;
 }
 
 .card:hover {
@@ -278,33 +324,33 @@ button:hover {
 .card i {
     font-size: 2.5rem;
     color: #f9004d;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .card h5 {
     font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card h3 {
+    font-size: 1.25rem;
     margin-bottom: 1rem;
+    color: #fff;
 }
 
 .pra {
-    flex-grow: 1; /* Allow .pra to take available space */
-    overflow: hidden;  /*Prevent overflow */
+    flex-grow: 1;
 }
+
 .pra p {
     color: #ccc;
-    font-size: 0.9rem; /* Slightly smaller font for better fit */
-    line-height: 1.4; /* Tighter line spacing */
+    font-size: 0.9rem;
+    line-height: 1.4;
     margin-bottom: 1rem;
-     max-height: 100px; /*Limit visible text height */
-    overflow: hidden; /* Hide excess text */
-    text-overflow: ellipsis; /* Add ellipsis for truncated text */
-    display: -webkit-box;
-    -webkit-line-clamp: 4; /* Limit to 4 lines*/
-    -webkit-box-orient: vertical;
 }
 
 .more-content {
-    display: none; /* Hidden by default */
+    display: none;
     font-size: 0.9rem;
     color: #ccc;
 }
@@ -326,22 +372,66 @@ button:hover {
     color: #f9004d;
     border: 2px solid #f9004d;
 }
-.card .button {
-    display: inline-block;
-    background: #f9004d;
-    color: #fff;
-    padding: 0.5rem 1.5rem;
-    border-radius: 2rem;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background 0.3s ease, color 0.3s ease;
-    cursor: pointer;
+
+/* Certificates Timeline Styles */
+#certificates {
+    padding: 5rem 0;
+    background-color: #fff;
+    color: #333;
 }
 
-.card .button:hover {
-    background: transparent;
-    color: #f9004d;
-    border: 2px solid #f9004d;
+h2 {
+    text-align: center;
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-left: 4px solid #f9004d; /* Adjusted to match theme */
+    margin: 1rem 0;
+    position: relative;
+    border-radius: 1rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.timeline-item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item .timeline-content {
+    padding-left: 2rem;
+}
+
+.timeline-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.timeline-item p {
+    font-size: 1rem;
+    color: #777;
+    line-height: 1.6;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 20px;
+    width: 12px;
+    height: 12px;
+    background-color: #f9004d; /* Adjusted to match theme */
+    border-radius: 50%;
 }
 
 /* Skills Section */
@@ -607,19 +697,24 @@ footer .end {
     }
 
     /* About Section */
-    .about {
+    .about, #about {
         padding: 3rem 0;
     }
 
-    .main {
-        grid-template-columns: 1fr;
+    .main, #about {
+        flex-direction: column;
         padding: 0 2rem;
     }
 
-    .about-text {
+    .about-content, .about-text {
         width: 100%;
         padding-left: 0;
         text-align: left;
+    }
+
+    .cv-card {
+        width: 100%;
+        margin-top: 2rem;
     }
 
     .about-image img {
@@ -649,8 +744,33 @@ footer .end {
     }
 
     .card {
-        margin: 0;
+        min-height: 300px;
         padding: 1.5rem;
+    }
+
+    .pra p {
+        font-size: 0.85rem;
+    }
+
+    /* Certificates Section */
+    #certificates {
+        padding: 3rem 0;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .timeline-item {
+        padding: 1.5rem;
+    }
+
+    .timeline-item h3 {
+        font-size: 1.25rem;
+    }
+
+    .timeline-item p {
+        font-size: 0.9rem;
     }
 
     /* Skills Section */
@@ -719,15 +839,5 @@ footer .end {
     .top a {
         padding: 0.75rem;
         font-size: 0.875rem;
-    }
-
-    .card {
-        min-height: 300px; /* Slightly smaller for mobile */
-        max-height: 350px;
-    }
-    .pra p {
-        font-size: 0.85rem;
-        max-height: 80px; /* Adjust for mobile */
-        -webkit-line-clamp: 3; /* Fewer lines on smaller screens */
     }
 }
