@@ -242,6 +242,7 @@ button:hover {
     color: #333;
     max-width: 1200px;
     margin: 0 auto;
+    gap: 2rem;
 }
 
 .about-content {
@@ -249,14 +250,14 @@ button:hover {
 }
 
 .cv-card {
-    width: 25%;
+    width: 75%;
     padding: 2rem;
-    background-color: #f9f9f9; /* Matches timeline-item */
-    border-left: 4px solid #f9004d; /* Matches timeline-item */
-    border-radius: 1rem; /* Matches timeline-item */
+    background-color: #f9f9f9; 
+    border-left: 4px solid #f9004d; 
+    border-radius: 1rem; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative; /* For ::before */
-    transition: box-shadow 0.3s ease; /* Matches timeline-item */
+    position: relative; 
+    transition: box-shadow 0.3s ease; 
     text-align: left;
 }
 
@@ -314,6 +315,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 1rem auto;
 }
 
 .card:hover {
@@ -396,7 +398,7 @@ h2 {
 .timeline-item {
     padding: 2rem;
     background-color: #f9f9f9;
-    border-left: 4px solid #f9004d; /* Adjusted to match theme */
+    border-left: 4px solid #f9004d; 
     margin: 1rem 0;
     position: relative;
     border-radius: 1rem;
@@ -713,8 +715,53 @@ footer .end {
     }
 
     .cv-card {
-        width: 100%;
-        margin-top: 2rem;
+        width: 100%; /* Full width to align with timeline and other sections */
+        padding: 2rem;
+        background-color: #f9f9f9; /* Matches timeline-item */
+        border-left: 4px solid #f9004d; /* Matches timeline-item */
+        margin: 1rem 0; /* Matches timeline-item spacing */
+        position: relative;
+        border-radius: 1rem; /* Matches timeline-item */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Base shadow */
+        transition: box-shadow 0.3s ease; /* Matches timeline-item */
+        text-align: left;
+    }
+
+    .cv-card:hover {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Matches timeline-item hover */
+    }
+    
+    .cv-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem; /* Adjusted for consistency with timeline-item */
+        color: #333;
+    }
+    
+    .cv-card p { /* Added for consistency if you add paragraph text */
+        font-size: 1rem;
+        color: #777;
+        line-height: 1.6;
+    }
+    
+    .cv-card a {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.75rem 1.5rem;
+        background-color: #f9004d;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 2rem;
+        font-weight: 600;
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+    
+    .cv-card a:hover {
+        background-color: #d80040;
+        transform: scale(1.05);
+    }
+
+    .cv-card .cv-card-content {
+        padding-left: 2rem;
     }
 
     .about-image img {
